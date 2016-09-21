@@ -1,0 +1,36 @@
+<% if(typeof submitted !== "undefined"){ %>
+     <% if(submitted == true){ %>
+       <div class="alert alert-success" role="alert">Coupon has been
+       submitted. Our administrator will review and the coupon
+       shortly.</div>
+<% } %> <% } %>
+<% if(coupons.length < 21){ %>
+     <% var cut = 0; %>
+   <% } %>
+   <% if(coupons.length == 21){ %>
+     <% var cut = 1; %>
+   <% } %>
+   <% for(var i = 0; i < coupons.length - cut; i++) {%>
+     <div class="col-sm-3 col-lg-3 col-md-3">
+       <div class="thumbnail">
+         <img src="<%= image_url + '/' + coupons[i].thumbnail_id %>"
+         alt="">
+         <div class="caption">
+           <h4 class="pull-right"><del><%= coupons[i].price %></del>
+           <%= coupons[i].discount %></h4>
+           <h4><a href="<%= coupons[i].url %>"> <%= coupons[i].title%></a></h4>
+           <p><%= coupons[i].desc %></p>
+         </div>
+     </div>
+  </div>
+<% } %> </div>
+
+<ul class="pager">
+   <% if(prev == true){ %>
+     <li class="previous"><a href="/?prev=true&current=<%= current
+   %>">Previous</a></li>
+   <% } %>
+   <% if(next == true){ %>
+     <li class="next"><a href="/?next=true&current=<%= current %>">Next</
+   a></li>
+<% } %> </ul>

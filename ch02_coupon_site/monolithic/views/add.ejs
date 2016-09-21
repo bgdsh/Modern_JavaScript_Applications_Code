@@ -1,0 +1,31 @@
+<form role="form" method="post" action="<%= upload_service_url %>/submit" enctype="multipart/form-data">
+    <div class="form-group">
+        <label for="email">Your Email address:</label>
+        <input type="email" class="form-control" id="email" name="email">
+     </div>
+     <div class="form-group">
+        <label for="title">Product Title:</label>
+        <input type="text" class="form-control" id="title" name="title">
+     </div>
+     <div class="form-group">
+        <label for="desc">Product Description:</label>
+        <textarea class="form-control" id="desc" name="desc"></textarea>
+    </div>
+     <div class="form-group">
+        <label for="url">Product URL: </label>
+        <input type="text" class="form-control" id="url" name="url">
+     </div>
+     <div class="form-group">
+        <label for="price">Original Price:</label>
+        <input type="text" class="form-control" id="price" name="price">
+     </div>
+     <div class="form-group">
+        <label for="discount">Discount Price:</label>
+        <input type="text" class="form-control" id="discount" name="discount">
+     </div>
+     <div class="form-group">
+        <label for="thumbnail">Product Image: <i>(320 x 150)</i></label>
+        <input type="file" class="form-control" id="thumbnail" name="thumbnail">
+    </div>
+     <button type="submit" class="btn btn-default">Submit</button>
+</form>

@@ -1,0 +1,28 @@
+<% for(var i = 0; i < coupons.length; i++) {%>
+     <tr>
+       <td><%= coupons[i].title %></td>
+       <td><%= coupons[i].desc %></td>
+       <td><%= coupons[i].url %></td>
+       <td><img style="width: 300px !important" src="<%= image_url +'/' + coupons[i].thumbnail_id %>" alt=""></td>
+       <td><%= coupons[i].price %></td>
+       <td><%= coupons[i].discount %></td>
+       <td>
+         <form role="form" method="get" action="/admin/accept">
+           <div class="form-group">
+             <input type="hidden" value="<%= coupons[i].id %>"
+             name="id">
+             <input type="hidden" value="<%= coupons[i].thumbnail_id %>" name="thumbnail_id">
+             <input type="submit" value="Accept" class="btn btn-default">
+           </div>
+         </form>
+       </td>
+       <td>
+         <form role="form" method="get" action="/admin/reject">
+           <div class="form-group">
+             <input type="hidden" value="<%= coupons[i].id %>" name="id">
+             <input type="hidden" value="<%= coupons[i].thumbnail_id%>" name="thumbnail_id">
+             <input type="submit" value="Reject" class="btn btn-default">
+        </div>
+      </form>
+    </td>
+</tr> <% } %>
