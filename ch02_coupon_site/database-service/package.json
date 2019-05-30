@@ -11,6 +11,6 @@
   "license": "ISC",
   "dependencies": {
     "express": "^4.14.0",
-    "seneca": "^0.6.5"
+    "seneca": "^3.11.0"
   }
 }
