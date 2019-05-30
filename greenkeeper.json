@@ -1,0 +1,14 @@
+{
+  "groups": {
+    "default": {
+      "packages": [
+        "ch01_seneca/package.json",
+        "ch02_coupon_site/config-service/package.json",
+        "ch02_coupon_site/database-service/package.json",
+        "ch02_coupon_site/image-storage/package.json",
+        "ch02_coupon_site/monolithic/package.json",
+        "ch02_coupon_site/upload-service/package.json"
+      ]
+    }
+  }
+}
